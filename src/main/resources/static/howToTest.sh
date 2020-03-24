@@ -2,6 +2,7 @@
 #Windows
 #insert
 curl --user user1@domain.com:123 -H "Content-Type: application/json" -X POST --data "{\"title\":\"mydog4\",\"note\":\"hansom4\"}" http://localhost:8080/api/v1/notes
+
 #notes by user
 curl --user user1@domain.com:123 -H "Content-Type: application/json" -X GET http://localhost:8080/api/v1/notes
 
