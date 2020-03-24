@@ -32,7 +32,7 @@ public class ResourceController {
 
     @RequestMapping(value = "/notes", method = RequestMethod.PUT)
     @ResponseStatus(code = HttpStatus.OK)
-    public Notes updateNotes(@RequestParam Notes note){
+    public Notes updateNotes(@RequestBody Notes note){
         return notesService.updateNotes(note);
     }
 
