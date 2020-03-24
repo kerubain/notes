@@ -24,19 +24,19 @@ public class ResourceController {
         return notesService.getNote(idNote);
     }
 
-    @RequestMapping(value = "/note", method = RequestMethod.POST)
+    @RequestMapping(value = "/notes", method = RequestMethod.POST)
     @ResponseStatus(code = HttpStatus.CREATED)
     public Long insertNotes(@RequestBody Notes note){
         return notesService.insertNotes(note);
     }
 
-    @RequestMapping(value = "/note", method = RequestMethod.PUT)
+    @RequestMapping(value = "/notes", method = RequestMethod.PUT)
     @ResponseStatus(code = HttpStatus.OK)
     public Notes updateNotes(@RequestParam Notes note){
         return notesService.updateNotes(note);
     }
 
-    @RequestMapping(value = "/note", method = RequestMethod.GET)
+    @RequestMapping(value = "/notes", method = RequestMethod.DELETE)
     @ResponseStatus(code = HttpStatus.OK)
     public void deleteNotes(@RequestParam Long idNote){
         notesService.deleteNotes(idNote);
