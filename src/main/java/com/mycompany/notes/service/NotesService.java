@@ -5,7 +5,7 @@ import com.mycompany.notes.domain.Notes;
 import java.util.List;
 
 public interface NotesService {
-    List<Notes> getNotesByUsername(String username);
+    List<Notes> getNotesByUsername();
 
     Notes getNote(Long idNote);
 

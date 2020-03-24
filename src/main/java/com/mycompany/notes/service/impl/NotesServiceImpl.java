@@ -4,6 +4,8 @@ import com.mycompany.notes.domain.Notes;
 import com.mycompany.notes.repository.NotesRepository;
 import com.mycompany.notes.service.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,8 +16,9 @@ public class NotesServiceImpl implements NotesService {
     NotesRepository notesRepository;
 
     @Override
-    public List<Notes> getNotesByUsername(String username){
-        return notesRepository.findByUsername(username);
+    public List<Notes> getNotesByUsername(){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        return notesRepository.findByUsername(auth.getName());
     }
 
     @Override

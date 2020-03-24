@@ -14,12 +14,12 @@ public class ResourceController {
     @Autowired
     private NotesService notesService;
 
-    @RequestMapping(value = "/note", method = RequestMethod.GET)
-    public List<Notes> getNotesByUsername(@RequestParam String username){
-        return notesService.getNotesByUsername(username);
+    @RequestMapping(value = "/notes", method = RequestMethod.GET)
+    public List<Notes> getNotesByUsername(){
+        return notesService.getNotesByUsername();
     }
 
-    @RequestMapping(value = "/notes", method = RequestMethod.GET)
+    @RequestMapping(value = "/note", method = RequestMethod.GET)
     public Notes getNote(@RequestParam Long idNote){
         return notesService.getNote(idNote);
     }
