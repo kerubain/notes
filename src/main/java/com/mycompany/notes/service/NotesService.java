@@ -5,9 +5,13 @@ import com.mycompany.notes.domain.Notes;
 import java.util.List;
 
 public interface NotesService {
-    List<Notes> getNotesByUsername();
+    List<Notes> getNotesByUsername(String username);
+
     Notes getNote(Long idNote);
+
     Long insertNotes(Notes note);
+
     Notes updateNotes(Notes note);
+
     void deleteNotes(Long idNote);
 }
