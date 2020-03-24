@@ -3,15 +3,20 @@ package com.mycompany.notes.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
 public class Users {
     @Id
     @Column
+    @NotEmpty
     private String username;
 
     @Column
+    @NotEmpty
+    @Size(min = 8)
     private String password;
 
     @Column

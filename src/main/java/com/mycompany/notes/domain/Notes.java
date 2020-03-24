@@ -1,6 +1,8 @@
 package com.mycompany.notes.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -14,9 +16,11 @@ public class Notes {
     private String username;
 
     @Column
+    @NotEmpty
+    @Size(max = 50)
     private String title;
 
-    @Column
+    @Column(length = 1000)
     private String note;
 
     @Column
