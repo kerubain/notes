@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface NotesRepository extends CrudRepository<Notes, Long> {
     List<Notes> findByUsername(String username);
+    Notes findByUsernameAndIdNote(String username, Long idNote);
 }

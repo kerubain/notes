@@ -23,7 +23,8 @@ public class NotesServiceImpl implements NotesService {
 
     @Override
     public Notes getNote(Long idNote){
-        return notesRepository.findById(idNote).orElse(null);
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        return notesRepository.findByUsernameAndIdNote(auth.getName(), idNote);
     }
 
     @Override

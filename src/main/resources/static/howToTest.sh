@@ -5,4 +5,8 @@ curl --user user1@domain.com:123 -H "Content-Type: application/json" -X POST --d
 #notes by user
 curl --user user1@domain.com:123 -H "Content-Type: application/json" -X GET http://localhost:8080/api/v1/notes
 
+#single note
+curl --user user1@domain.com:123 -H "Content-Type: application/json" -X GET http://localhost:8080/api/v1/note?idNote=1
+curl --user user2@domain.com:123 -H "Content-Type: application/json" -X GET http://localhost:8080/api/v1/note?idNote=1
+
 
